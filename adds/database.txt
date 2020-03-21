@@ -1,0 +1,21 @@
+create table item (
+id int unsigned auto_increment primary key,
+url_path varchar(100),
+title varchar(100),
+keywords varchar(200),
+description varchar(400),
+context text,
+author varchar(100),
+publisher varchar(100),
+big_img varchar(20),
+small_img varchar(30),
+share_addr varchar(100),
+unique url_path (url_path)
+);
+
+
+
+insert into item (url_path,title,keywords,description,context,author,publisher,big_img,small_img,share_addr)
+values("jenkins2quanweizhinan","Jenkins 2 权威指南","Jenkins,权威指南,devops,计算机,jenkins2","通过阅读《Jenkins 2权威指南》可以学到如何利用Jenkins 2的新特性来定义流水线即代码、集成其他关键技术，以及创建自动化的、可靠的流水线，以便简化和加速DevOps环境的建设。","《Jenkins 2.x 实践指南》首先介绍笔者对软件工程生产力的独到见解，然后通过一个Hello world 示例带领初学者入门Jenkins pipeline，接下来详细介绍Jenkins pipeline 的语法，在Jenkins pipeline 中如何实现持续集成、持续交付的各个阶段，包括构建、测试、制品管理、部署等，以及当现有pipeline 的步骤不能满足需求时，扩展Jenkins pipeline 的多种方式。最后介绍Jenkins 如何整合多个第三方系统，以实现ChatOps 及自动化运维；为避免读者出现“不知从哪里下手”的情况，本书通过一个简单的案例介绍如何设计pipeline。",
+"【美】布伦特·莱斯特（Brent Laster）,郝树伟等","电子工业出版社","img1","small_imgs222","链接：https://pan.baidu.com/s/1D4dnHFeu4sFjOJNClzltBQ 
+提取码：zv06");
