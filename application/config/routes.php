@@ -51,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['item/(:any)'] = 'item/index/$1';
 $route['ticket/(:any)'] = 'ticket/index/$1';
+$route['cat/(:any)'] = 'cat/index/$1';
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

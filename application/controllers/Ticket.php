@@ -28,7 +28,7 @@ class Ticket extends CI_Controller {
 	public function index($urlPath){
 		$data['urlPath'] = $urlPath;
 		$this->load->view('header');
-		$this->load->view('ticket_message',$data);
+		$this->load->view('ticket/ticket_message',$data);
 		$this->load->view('footer');
 		//redirect('/','location',301);
 	}
@@ -40,7 +40,7 @@ class Ticket extends CI_Controller {
 		if (24 != strlen($number)) {
 			$data['message_warning'] = "下载码错误";
 			$this->load->view('header');
-			$this->load->view('ticket_message_warning',$data);
+			$this->load->view('ticket/ticket_message_warning',$data);
 			$this->load->view('footer');
 			return false;
 		}
@@ -49,18 +49,18 @@ class Ticket extends CI_Controller {
 		if (!$numberInfo){
 			$data['message_warning'] = "下载码不存在";
 			$this->load->view('header');
-			$this->load->view('ticket_message_warning',$data);
+			$this->load->view('ticket/ticket_message_warning',$data);
 			$this->load->view('footer');
 			return true;
 		}elseif ( 2 == $numberInfo){
 			$this->load->view('header');
-			$this->load->view('ticket_message_used');
+			$this->load->view('ticket/ticket_message_used');
 			$this->load->view('footer');
 			return true;
 		}elseif(1 == $numberInfo){
 			$item['message_warning'] = $this->Item_model->getItemShareAddr($urlPath);
 			$this->load->view('header');
-			$this->load->view('ticket_message_warning',$item);
+			$this->load->view('ticket/ticket_message_warning',$item);
 			$this->load->view('footer');
 		}
 	}

@@ -22,12 +22,6 @@ class Item_model extends CI_Model{
 	}
 
 	public function getItemInfo($urlPath='default'){
-		//如果是分类页
-/*			$where = "cid=cat_id AND cat_slug='".$cat."'";
-			$this->db->join($this->cat_table,$where);
-			$this->db->where(' end_time > ',$this->today);
-			$this->db->order_by('id DESC');
-			$query = $this->db->get($this->item_table,$limit,$offset);*/
 		$query = $this->db->get_where($this->item_table,array('url_path'=>$urlPath));
 		return $query->row();
 	}
@@ -36,5 +30,13 @@ class Item_model extends CI_Model{
 		$this->db->select('share_addr');
 		$query = $this->db->get_where($this->item_table,array('url_path'=>$urlPath));
 		return $query->row()->share_addr;
+	}
+
+	public function getItemInfoPage($type,$offset='0'){
+		//如果是分类页
+		$this->db->select('url_path,title,author,big_img');
+		$this->db->where('type ',$type);
+		$query = $this->db->get($this->item_table,$offset,'30');
+		return $query;
 	}
 }

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Item extends CI_Controller {
+class Cat extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -22,23 +22,20 @@ class Item extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Item_model');
-		$this->load->helper('url');
+		$this->load->model('Cat_model');
 	}
 
-	public function index($url_path="default")
-	{
-		if('default' == $url_path){
+	public function index($urlPath){
+		$cat_id = $this->Cat_model->getCatId($urlPath);
+		// cat_id 是否存在
+		if(!$cat_id){
 			redirect('/','location',301);
 		}
-		$item_info = $this->Item_model->getItemInfo($url_path);
-		if(!$item_info) {
-			show_404();
-		}
-		$item_info->share_addr = '/ticket/'.$url_path;
-		$item['details'] = $item_info;
-	//	var_dump($item['details']);
+		$data['items'] = $this->Item_model->getItemInfoPage($cat_id);
+//		var_dump($data['items']);
 		$this->load->view('header');
-		$this->load->view('item/item_message',$item);
+		$this->load->view('cat/cat_message',$data);
 		$this->load->view('footer');
+		//redirect('/','location',301);
 	}
 }
