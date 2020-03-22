@@ -14,8 +14,21 @@ unique url_path (url_path)
 );
 
 
-
 insert into item (url_path,title,keywords,description,context,author,publisher,big_img,small_img,share_addr)
-values("jenkins2quanweizhinan","Jenkins 2 È¨ÍşÖ¸ÄÏ","Jenkins,È¨ÍşÖ¸ÄÏ,devops,¼ÆËã»ú,jenkins2","Í¨¹ıÔÄ¶Á¡¶Jenkins 2È¨ÍşÖ¸ÄÏ¡·¿ÉÒÔÑ§µ½ÈçºÎÀûÓÃJenkins 2µÄĞÂÌØĞÔÀ´¶¨ÒåÁ÷Ë®Ïß¼´´úÂë¡¢¼¯³ÉÆäËû¹Ø¼ü¼¼Êõ£¬ÒÔ¼°´´½¨×Ô¶¯»¯µÄ¡¢¿É¿¿µÄÁ÷Ë®Ïß£¬ÒÔ±ã¼ò»¯ºÍ¼ÓËÙDevOps»·¾³µÄ½¨Éè¡£","¡¶Jenkins 2.x Êµ¼ùÖ¸ÄÏ¡·Ê×ÏÈ½éÉÜ±ÊÕß¶ÔÈí¼ş¹¤³ÌÉú²úÁ¦µÄ¶Àµ½¼û½â£¬È»ºóÍ¨¹ıÒ»¸öHello world Ê¾Àı´øÁì³õÑ§ÕßÈëÃÅJenkins pipeline£¬½ÓÏÂÀ´ÏêÏ¸½éÉÜJenkins pipeline µÄÓï·¨£¬ÔÚJenkins pipeline ÖĞÈçºÎÊµÏÖ³ÖĞø¼¯³É¡¢³ÖĞø½»¸¶µÄ¸÷¸ö½×¶Î£¬°üÀ¨¹¹½¨¡¢²âÊÔ¡¢ÖÆÆ·¹ÜÀí¡¢²¿ÊğµÈ£¬ÒÔ¼°µ±ÏÖÓĞpipeline µÄ²½Öè²»ÄÜÂú×ãĞèÇóÊ±£¬À©Õ¹Jenkins pipeline µÄ¶àÖÖ·½Ê½¡£×îºó½éÉÜJenkins ÈçºÎÕûºÏ¶à¸öµÚÈı·½ÏµÍ³£¬ÒÔÊµÏÖChatOps ¼°×Ô¶¯»¯ÔËÎ¬£»Îª±ÜÃâ¶ÁÕß³öÏÖ¡°²»Öª´ÓÄÄÀïÏÂÊÖ¡±µÄÇé¿ö£¬±¾ÊéÍ¨¹ıÒ»¸ö¼òµ¥µÄ°¸Àı½éÉÜÈçºÎÉè¼Æpipeline¡£",
-"¡¾ÃÀ¡¿²¼Â×ÌØ¡¤À³Ë¹ÌØ£¨Brent Laster£©,ºÂÊ÷Î°µÈ","µç×Ó¹¤Òµ³ö°æÉç","img1","small_imgs222","Á´½Ó£ºhttps://pan.baidu.com/s/1D4dnHFeu4sFjOJNClzltBQ 
-ÌáÈ¡Âë£ºzv06");
+values("jenkins2quanweizhinan","Jenkins 2 æƒå¨æŒ‡å—","Jenkins,æƒå¨æŒ‡å—,devops,è®¡ç®—æœº,jenkins2","é€šè¿‡é˜…è¯»ã€ŠJenkins 2æƒå¨æŒ‡å—ã€‹å¯ä»¥å­¦åˆ°å¦‚ä½•åˆ©ç”¨Jenkins 2çš„æ–°ç‰¹æ€§æ¥å®šä¹‰æµæ°´çº¿å³ä»£ç ã€é›†æˆå…¶ä»–å…³é”®æŠ€æœ¯ï¼Œä»¥åŠåˆ›å»ºè‡ªåŠ¨åŒ–çš„ã€å¯é çš„æµæ°´çº¿ï¼Œä»¥ä¾¿ç®€åŒ–å’ŒåŠ é€ŸDevOpsç¯å¢ƒçš„å»ºè®¾ã€‚","ã€ŠJenkins 2.x å®è·µæŒ‡å—ã€‹é¦–å…ˆä»‹ç»ç¬”è€…å¯¹è½¯ä»¶å·¥ç¨‹ç”Ÿäº§åŠ›çš„ç‹¬åˆ°è§è§£ï¼Œç„¶åé€šè¿‡ä¸€ä¸ªHello world ç¤ºä¾‹å¸¦é¢†åˆå­¦è€…å…¥é—¨Jenkins pipelineï¼Œæ¥ä¸‹æ¥è¯¦ç»†ä»‹ç»Jenkins pipeline çš„è¯­æ³•ï¼Œåœ¨Jenkins pipeline ä¸­å¦‚ä½•å®ç°æŒç»­é›†æˆã€æŒç»­äº¤ä»˜çš„å„ä¸ªé˜¶æ®µï¼ŒåŒ…æ‹¬æ„å»ºã€æµ‹è¯•ã€åˆ¶å“ç®¡ç†ã€éƒ¨ç½²ç­‰ï¼Œä»¥åŠå½“ç°æœ‰pipeline çš„æ­¥éª¤ä¸èƒ½æ»¡è¶³éœ€æ±‚æ—¶ï¼Œæ‰©å±•Jenkins pipeline çš„å¤šç§æ–¹å¼ã€‚æœ€åä»‹ç»Jenkins å¦‚ä½•æ•´åˆå¤šä¸ªç¬¬ä¸‰æ–¹ç³»ç»Ÿï¼Œä»¥å®ç°ChatOps åŠè‡ªåŠ¨åŒ–è¿ç»´ï¼›ä¸ºé¿å…è¯»è€…å‡ºç°â€œä¸çŸ¥ä»å“ªé‡Œä¸‹æ‰‹â€çš„æƒ…å†µï¼Œæœ¬ä¹¦é€šè¿‡ä¸€ä¸ªç®€å•çš„æ¡ˆä¾‹ä»‹ç»å¦‚ä½•è®¾è®¡pipelineã€‚",
+"ã€ç¾ã€‘å¸ƒä¼¦ç‰¹Â·è±æ–¯ç‰¹ï¼ˆBrent Lasterï¼‰,éƒæ ‘ä¼Ÿç­‰","ç”µå­å·¥ä¸šå‡ºç‰ˆç¤¾","img1","small_imgs222","é“¾æ¥ï¼šhttps://pan.baidu.com/s/1D4dnHFeu4sFjOJNClzltBQ 
+æå–ç ï¼šzv06");
+
+
+create table ticket (
+id int unsigned auto_increment primary key,
+number char(24),
+used boolean default 0,
+ip_addr varchar(15),
+send_time datetime default '2020-01-01 00:00:00',
+unique number (number)
+);
+
+
+
+insert into ticket (number) values("yCeu6QXZC3Hk7TiahNj4YsAS");

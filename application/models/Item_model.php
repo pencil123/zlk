@@ -31,4 +31,10 @@ class Item_model extends CI_Model{
 		$query = $this->db->get_where($this->item_table,array('url_path'=>$urlPath));
 		return $query->row();
 	}
+
+	public function getItemShareAddr($urlPath='default'){
+		$this->db->select('share_addr');
+		$query = $this->db->get_where($this->item_table,array('url_path'=>$urlPath));
+		return $query->row()->share_addr;
+	}
 }
