@@ -4,7 +4,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Welcome to CodeIgniter</title>
-	<link rel="stylesheet" type="text/css" href="../static/css/mains.css" />
+	<link rel="stylesheet" type="text/css" href="static/css/mains.css" />
 </head>
 <body>
 
@@ -20,7 +20,7 @@
 	</div>	
   </div>
 </div>
-<div id="context">
+<div id="item_infos">
   <div class="container">
 	<div id="route">
 	首页 -> 计算机 -> Jenkins2
@@ -28,7 +28,7 @@
 	
 	<div id="item_brief">
 		<div class="big_img">
-			<img src="../static/imgs/wanghong.jpg">
+			<img src="/adds/static/imgs/wanghong.jpg">
 		</div>
 		<div class="item_infos">
 			<ul>
@@ -41,15 +41,27 @@
 		</div>
 		<div class="weixin_info">
 			<div id="weixin_img">
-				<img src="../static/imgs/weixin.jpg">
+				<img src="/adds/static/imgs/weixin.jpg">
 			</div>
 			<div id="download_info">
-				网盘下载。
+				<input value="网盘下载" type="button" onclick="plsInputCode();" />
 			</div>
 		</div>
 	</div>
-	
+	<div id="context">
+		<input type="button" value="文字显示" onclick="switchOne('.context_text','.context_imgs');" />
+		<input type="button" value="图片显示" onclick="switchOne('.context_imgs','.context_text');" />
+	</div>
+	<div class="context_text">
+	enkins,权威指南,devops,计算机,jenkins2","通过阅读《Jenkins 2权威指南》可以学到如何利用Jenkins 2的新特性来定义流水线即代码、集成其他关键技术，以及创建自动化的、可靠的流水线，以便简化和加速DevOps环境的建设。","《Jenkins 2.x 实践指南》首先介绍笔者对软件工程生产力的独到见解，然后通过一个Hello world 示例带领初学者入门Jenkins pipeline，接下来详细介绍Jenkins pipeline 的语法，在Jenkins pipeline 中如何实现持续集成、持续交付的各个阶段，包括构建、测试、制品管理、部署等，以及当现有pipeline 的步骤不能满足需求时，扩展Jenkins pipeline 的多种方式。最后介绍Jenkins 如何整合多个第三方系统，以实现ChatOps 及自动化运维；为避免读者出现“不知从哪里下手”的情况，本书通过一个简单的案例介绍如何设计pipeline。
+	</div>
+	<div class="context_imgs" style="display:none">
+	 图片信息说明列表
+	</div>
   </div>
+  
 </div>
+	<script src="/adds/static/js/jquery-3.4.1.min.js"></script>
+	<script src="/adds/static/js/main.js"></script>
 </body>
 </html>
