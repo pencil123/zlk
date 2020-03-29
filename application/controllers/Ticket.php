@@ -33,35 +33,27 @@ class Ticket extends CI_Controller {
 		//redirect('/','location',301);
 	}
 
-	public function verify($urlPath)
+	public function verify()
 	{
 		$number = $this->input->post('number');
 		$number = trim($number);
+		$urlPath = $this->input->post('urlPath');
+
 		if (24 != strlen($number)) {
-			$data['message_warning'] = "下载码错误";
-			$this->load->view('header');
-			$this->load->view('ticket/ticket_message_warning',$data);
-			$this->load->view('footer');
+			echo "下载码错误!";
 			return false;
 		}
 		$numberInfo = $this->Ticket_model->updateNumber($number);
 
 		if (!$numberInfo){
-			$data['message_warning'] = "下载码不存在";
-			$this->load->view('header');
-			$this->load->view('ticket/ticket_message_warning',$data);
-			$this->load->view('footer');
+			echo "下载码不存在!";
 			return true;
 		}elseif ( 2 == $numberInfo){
-			$this->load->view('header');
-			$this->load->view('ticket/ticket_message_used');
-			$this->load->view('footer');
+			echo "下载码已经使用过，已失效！";
 			return true;
 		}elseif(1 == $numberInfo){
-			$item['message_warning'] = $this->Item_model->getItemShareAddr($urlPath);
-			$this->load->view('header');
-			$this->load->view('ticket/ticket_message_warning',$item);
-			$this->load->view('footer');
+			$download = $this->Item_model->getItemShareAddr($urlPath);
+			echo $download;
 		}
 	}
 }

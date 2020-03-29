@@ -9,13 +9,14 @@
 <body>
 
 <div id="site-header">
-	<div class="container-inner">
-		<p>天空飘来两个字:淡定！</p>
-	</div>
-	
-	<div class="nav">
-		<p>计算机</p>
-		<p>机械</p>
-		<p>英语</p>
+	<div class="container">
+		<div class="header-msg">
+			<p>天空飘来两个字:淡定！</p>
+		</div>
+		<div class="nav">
+			<p class="active">计算机</p>
+			<p>机械</p>
+			<p>英语</p>
+		</div>
 	</div>
 </div>

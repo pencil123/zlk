@@ -7,7 +7,7 @@ function switchOne(showE,hiddenE){
 
 function plsInputCode() {
 	var code = prompt("请输入下载码！");
-	$.post("/adds/hello.html",{'code':code},function(data){
+	$.post("/ticket/verify",{'number':code},function(data){
 		window.alert(data);
 	});
 }

@@ -31,6 +31,7 @@ class Item extends CI_Controller {
 			redirect('/','location',301);
 		}
 		$item_info = $this->Item_model->getItemInfo($url_path);
+		$item_info->small_imgs = json_decode($item_info->small_img,true);
 		if(!$item_info) {
 			show_404();
 		}

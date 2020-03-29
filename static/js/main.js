@@ -5,7 +5,9 @@ function switchOne(showE,hiddenE){
 	document.querySelector(hiddenE).style.display = "none";
 }
 
-function plsInputCode() {
+function plsInputCode(urlPath) {
 	var code = prompt("请输入下载码！");
-	$.post("https://cn-blogs.cn",{'code':code});
+	$.post("/ticket/verify",{'number':code,'urlPath':urlPath},function(data){
+		window.alert(data);
+	});
 }
