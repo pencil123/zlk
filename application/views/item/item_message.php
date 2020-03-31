@@ -41,7 +41,6 @@
 			<?php foreach($details->small_imgs['small'] as $smallimg):?>
 				<img src="/uploads/<?php echo $details->url_path.'/'.$smallimg ;?>" />
 			<?php endforeach;?>
-
 		</div>
 	</div>
 
