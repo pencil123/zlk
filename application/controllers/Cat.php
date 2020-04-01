@@ -25,14 +25,13 @@ class Cat extends CI_Controller {
 		$this->load->model('Cat_model');
 	}
 
-	public function index($urlPath){
+	public function index($urlPath="default"){
 		$cat_id = $this->Cat_model->getCatId($urlPath);
 		// cat_id 是否存在
 		if(!$cat_id){
 			redirect('/','location',301);
 		}
 		$data['items'] = $this->Item_model->getItemInfoPage($cat_id);
-//		var_dump($data['items']);
 		$this->load->view('header');
 		$this->load->view('cat/cat_message',$data);
 		$this->load->view('footer');

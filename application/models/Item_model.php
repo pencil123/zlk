@@ -36,7 +36,7 @@ class Item_model extends CI_Model{
 		//如果是分类页
 		$this->db->select('url_path,title,author,big_img');
 		$this->db->where('type ',$type);
-		$query = $this->db->get($this->item_table,$offset,'30');
+		$query = $this->db->get($this->item_table,16,$offset);
 		return $query;
 	}
 }
