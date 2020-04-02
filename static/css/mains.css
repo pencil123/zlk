@@ -218,13 +218,37 @@ body {
 }
 
 .item_cat{
-	width: 25%;
+	max-width: 25%;
+	flex: 0 0 25%;
+	padding: 3px;
+	box-sizing: border-box;
+	border: 3px solid #ddd;
+	background-color: #FFFFFF;
 }
 
 .item_cat img {
 	border-radius:3px;
 	box-shadow:rgba(0,0,0,0.15) 0 0 8px;
-	background-color: #FFFFFF;
-	border: 1px solid #ddd;
 	max-width: 100%;
+}
+
+.author-area {
+	line-height: 16px;
+	padding: 2px 1px;
+	overflow: hidden;
+	max-width: 100%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 0.9rem;
+}
+
+.title-area {
+	line-height: 16px;
+	padding: 3px 6px;
+	overflow: hidden;
+	font-weight: bolder;
+	max-width: 100%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 0.9rem;
 }
