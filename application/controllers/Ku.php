@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Cat extends CI_Controller {
+class Ku extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,40 +18,43 @@ class Cat extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
 	function __construct()
 	{
 		parent::__construct();
+		$this->load->helper('url');
 		$this->load->model('Item_model');
 		$this->load->model('Cat_model');
-		$this->load->helper('url');
 		$this->load->library('pagination');
 	}
 
-	public function index($urlPath="default",$page=1){
-		$cat_id = $this->Cat_model->getCatId(rawurldecode($urlPath));
-		// cat_id 是否存在
-		if(!$cat_id){
-			redirect('/','location',301);
-		}
 
-		$page = ($page ==1 ) ? $page : substr($page,0,-5);
+	public function index($page = "1")
+	{
+		$config['uri_segment'] = 2;
+		$page = ($page ==1) ? $page : substr($page,0,-5);
+		if(!$page) $page = 1;
 		$limit=16;
-		$config['base_url'] = site_url('/cat/'.$urlPath);
-		//$config['first_url'] = site_url('/welcome');
+
+
+		$config['base_url'] = site_url('/ku/');
+		$config['first_url'] = site_url('/');
 		$config['per_page'] = $limit;
-		$config['total_rows'] = $this->Item_model->getItemCount($cat_id);
+		$config['total_rows'] = $this->Item_model->getItemCount();
 		$config['suffix'] = '.html';
 		$config['use_page_numbers'] = TRUE;
 		$config['reuse_query_string'] = TRUE;
 		$this->pagination->initialize($config);
 		$data['pagination']=$this->pagination->create_links();
 
-		$data['items'] = $this->Item_model->getItemInfoPage($cat_id,($page-1) * $limit);
+
+		$data['items'] = $this->Item_model->getItemInfoPage('',($page-1) * $limit);
+		//$data['items'] = $this->Item_model->getItemInfoPage($cat_id);
 		$this->load->view('header');
-		$this->load->view('cat/cat_message',$data);
+		$this->load->view('ku/ku_message',$data);
 		$this->load->view('footer');
-		//redirect('/','location',301);
 	}
+
 
 	/**
 	 * url转移
@@ -67,7 +70,6 @@ class Cat extends CI_Controller {
 		//把$slug插入到$param后面，然后$param作为一个整体传递给index()调用
 		array_unshift($params,$slug);
 
-		return call_user_func_array(array('Cat', 'index'), $params);
+		return call_user_func_array(array('Ku', 'index'), $params);
 	}
-
 }

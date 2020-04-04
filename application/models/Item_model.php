@@ -32,11 +32,24 @@ class Item_model extends CI_Model{
 		return $query->row()->share_addr;
 	}
 
-	public function getItemInfoPage($type,$offset='0'){
+	public function getItemInfoPage($type = '',$offset='0'){
 		//如果是分类页
 		$this->db->select('url_path,title,author,big_img');
-		$this->db->where('type ',$type);
+		if (!$type == ''){
+			$this->db->where('type ',$type);
+		}
+		$this->db->order_by('id');
 		$query = $this->db->get($this->item_table,16,$offset);
 		return $query;
 	}
+
+	public function getItemCount($type = ''){
+		$this->db->select('COUNT(1) AS count');
+		if (!$type == ''){
+			$this->db->where('type',$type);
+		}
+		$query = $this->db->get($this->item_table);
+		return $query->row()->count;
+	}
+
 }
