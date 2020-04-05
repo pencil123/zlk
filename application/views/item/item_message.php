@@ -1,7 +1,10 @@
 <div id="item">
 	<div class="container">
 		<div id="route">
-			首页 -> 计算机 -> Jenkins2
+			<a href="/">首页</a>
+			->
+			<a href="/cat/jisuanji">计算机</a>
+			-> Jenkins2
 		</div>
 
 		<div id="item_brief">

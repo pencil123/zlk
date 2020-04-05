@@ -25,11 +25,19 @@ class Item extends CI_Controller {
 		$this->load->helper('url');
 	}
 
+	private function endsWith($haystack, $needle){
+		return $needle === '' || substr_compare($haystack, $needle, -strlen($needle)) === 0;
+	}
+
 	public function index($url_path="default")
 	{
 		if('default' == $url_path){
 			redirect('/','location',301);
 		}
+
+		$url_path = ($this->endsWith($url_path,'.html')) ? substr($url_path,0,-5):$url_path;
+
+
 		$item_info = $this->Item_model->getItemInfo($url_path);
 		$item_info->small_imgs = json_decode($item_info->small_img,true);
 		if(!$item_info) {

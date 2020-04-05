@@ -12,10 +12,10 @@
 <div id="site-header">
 	<div class="container">
 		<div class="header-msg">
-			<p>天空飘来两个字:淡定！</p>
+			<a href="/" ><p>天空飘来两个字:淡定！</p></a>
 		</div>
 		<div class="nav">
-			<p class="active">计算机</p>
+			<a href="/cat/jisuanji"><p class="active">计算机</p></a>
 			<p>机械</p>
 			<p>英语</p>
 		</div>
