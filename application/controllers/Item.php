@@ -42,4 +42,21 @@ class Item extends CI_Controller {
 		$this->load->view('item/item_message',$item);
 		$this->load->view('footer');
 	}
+
+	/**
+	 * url转移
+	 *
+	 * 把/cat/pants/50这样的url转到index($cat_slug,$offset = 0)来处理
+	 * 好处是只用创建一个function index就可以处理所有的类别/shirts或者/pants等等
+	 *
+	 * @slug String 类别slug，比如pants
+	 * @params array 其他后续参数
+	 */
+	public function _remap($slug, $params = array())
+	{
+		//把$slug插入到$param后面，然后$param作为一个整体传递给index()调用
+		array_unshift($params,$slug);
+
+		return call_user_func_array(array('Item', 'index'), $params);
+	}
 }

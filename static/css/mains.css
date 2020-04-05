@@ -16,6 +16,16 @@
 	.container{width: 1170px;}
 }
 
+a:hover {
+	color: #0056b3;
+	text-decoration: none;
+}
+
+a{
+	color: #007bff;
+	text-decoration: none;
+	background-color: transparent;
+}
 body {
 	font-size: 15px;
 	font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -65,8 +75,9 @@ body {
 	font-size: 16px;
 }
 
-.active {
-	background-color: #616161 !important;
+.active2 {
+	background-color: #efede8 !important;
+	color: white !important;;
 }
 
 #route {
@@ -199,6 +210,39 @@ body {
 	width:48%;
 }
 
+.pagination {
+	margin: 2px auto;
+	justify-content: center!important;
+	display: flex;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	list-style: none;
+	border-radius: .25rem;
+	box-sizing: border-box;
+	list-style-type: disc;
+	background-color: #fff;
+}
+
+.pagination li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+	list-style: none;
+	box-sizing: border-box;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.page-item {
+	position: relative;
+	display: block;
+	padding: .5rem .75rem;
+	margin-left: -1px;
+	line-height: 1.25;
+	color: #007bff;
+	background-color: #fff;
+	border: 1px solid #dee2e6;
+	font-weight: bolder;
+}
 
 #footer {
 	margin: 8px auto 1px;

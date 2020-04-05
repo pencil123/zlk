@@ -49,8 +49,8 @@ $config['prev_link'] = '上一页';
 $config['prev_tag_open'] = '<li class="page-item">';
 $config['prev_tag_close'] = '</li>';
 
-$config['cur_tag_open'] = '<li class="page-item active"><a class="page-link" href="#">';
-$config['cur_tag_close'] = '<span class="sr-only">(current)</span></a></li>';
+$config['cur_tag_open'] = '<li class="page-item active2"><a class="page-link" href="#">';
+$config['cur_tag_close'] = '</a></li>';
 
 $config['num_tag_open'] = '<li class="page-item">';
 $config['num_tag_close'] = '</li>';

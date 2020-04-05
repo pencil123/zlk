@@ -11,8 +11,8 @@
 </div>
 
 
-<nav aria-label="Page navigation">
-	<ul class="pagination pagination-new justify-content-center">
+<nav class="container">
+	<ul class="pagination">
 		<?=$pagination;?>
 	</ul>
 </nav ><!-- .pagenav_wrapper -->
