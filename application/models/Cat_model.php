@@ -32,4 +32,9 @@ class Cat_model extends CI_Model{
 		}
 	}
 
+	public function getCatInfos($id){
+		$query = $this->db->get($this->cat_table,array('id'=>$id));
+		return $query->row();
+	}
+
 }

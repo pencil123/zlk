@@ -56,6 +56,12 @@ body {
 	width: 100%;
 	text-align: center;
 }
+
+.header-msg a,.header-msg a:active {
+	color: white;
+	text-decoration: none;
+	background-color: transparent;
+}
 .nav {
 	position: absolute;
 	bottom: 0px;

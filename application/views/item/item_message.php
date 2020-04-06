@@ -4,7 +4,8 @@
 			<a href="/">首页</a>
 			->
 			<a href="/cat/jisuanji">计算机</a>
-			-> Jenkins2
+			->
+			<?php echo $details->title;?>
 		</div>
 
 		<div id="item_brief">

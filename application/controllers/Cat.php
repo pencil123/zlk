@@ -47,7 +47,11 @@ class Cat extends CI_Controller {
 		$data['pagination']=$this->pagination->create_links();
 
 		$data['items'] = $this->Item_model->getItemInfoPage($cat_id,($page-1) * $limit);
-		$this->load->view('header');
+
+		// 设置header 信息
+		$header = $this->Cat_model->getCatInfos($cat_id);
+
+		$this->load->view('header',$header);
 		$this->load->view('cat/cat_message',$data);
 		$this->load->view('footer');
 		//redirect('/','location',301);
