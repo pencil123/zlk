@@ -49,7 +49,10 @@ class Cat extends CI_Controller {
 		$data['items'] = $this->Item_model->getItemInfoPage($cat_id,($page-1) * $limit);
 
 		// 设置header 信息
-		$header = $this->Cat_model->getCatInfos($cat_id);
+		$seoInfos = $this->Cat_model->getCatInfos($cat_id);
+		$header['title'] = $seoInfos->title;
+        $header['keywords'] = $seoInfos->keywords;
+        $header['description'] = $seoInfos->description;
         $header['nav'] = $this->Cat_model->getCatList();
 
 		$this->load->view('header',$header);

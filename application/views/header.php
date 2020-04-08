@@ -18,7 +18,7 @@
 		</div>
 		<div class="nav">
       <?php foreach ($nav->result() as $item):?>
-        <a href="<?php echo $item->url_path;?>"><p class="active"><?php echo $item->name;?></p></a>
+        <a href="/cat/<?php echo $item->url_path;?>"><p class="active"><?php echo $item->name;?></p></a>
       <?php endforeach;?>
 		</div>
 	</div>
