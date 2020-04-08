@@ -268,7 +268,7 @@ body {
 }
 
 .item_cat{
-	max-width: 25%;
+	max-width: 20%;
 	flex: 0 0 25%;
 	padding: 3px;
 	box-sizing: border-box;
