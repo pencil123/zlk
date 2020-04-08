@@ -50,6 +50,7 @@ class Cat extends CI_Controller {
 
 		// 设置header 信息
 		$header = $this->Cat_model->getCatInfos($cat_id);
+        $header['nav'] = $this->Cat_model->getCatList();
 
 		$this->load->view('header',$header);
 		$this->load->view('cat/cat_message',$data);

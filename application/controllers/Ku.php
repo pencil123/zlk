@@ -56,6 +56,7 @@ class Ku extends CI_Controller {
 		$header['keywords'] = "电子书,电子视频,资料分享,资料下载,资料库";
 		$header['description'] = "小站收集和分享电子书籍和电子视频资料,欢迎各位加入资料库分享大家庭。";
 
+		$header['nav'] = $this->Cat_model->getCatList();
 
 		$this->load->view('header',$header);
 		$this->load->view('ku/ku_message',$data);

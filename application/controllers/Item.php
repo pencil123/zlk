@@ -21,6 +21,7 @@ class Item extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
+        $this->load->model('Cat_model');
 		$this->load->model('Item_model');
 		$this->load->helper('url');
 	}
@@ -50,6 +51,7 @@ class Item extends CI_Controller {
 		$header['title'] = $item_info->title."资料下载分享";
 		$header['keywords'] = $item_info->keywords;
 		$header['description'] = $item_info->description;
+        $header['nav'] = $this->Cat_model->getCatList();
 
 		$this->load->view('header',$header);
 		$this->load->view('item/item_message',$item);

@@ -17,9 +17,9 @@
 			<a href="/" >天空飘来两个字:淡定！</a>
 		</div>
 		<div class="nav">
-			<a href="/cat/jisuanji"><p class="active">计算机</p></a>
-			<p>机械</p>
-			<p>英语</p>
+      <?php foreach ($nav->result() as $item):?>
+        <a href="<?php echo $item->url_path;?>"><p class="active"><?php echo $item->name;?></p></a>
+      <?php endforeach;?>
 		</div>
 	</div>
 </div>

@@ -37,4 +37,10 @@ class Cat_model extends CI_Model{
 		return $query->row();
 	}
 
+	public function getCatList(){
+        $this->db->select('name,url_path');
+        $this->db->order_by('id');
+	    $query = $this->db->get($this->cat_table);
+	    return $query;
+    }
 }
