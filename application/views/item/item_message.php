@@ -3,7 +3,7 @@
 		<div id="route">
 			<a href="/">首页</a>
 			->
-			<a href="/cat/jisuanji">计算机</a>
+			<a href="/cat/<?php echo $cat->url_path;?>"><?php echo $cat->name?></a>
 			->
 			<?php echo $details->title;?>
 		</div>

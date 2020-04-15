@@ -47,6 +47,8 @@ class Item extends CI_Controller {
 		$item_info->share_addr = '/ticket/'.$url_path;
 		$item['details'] = $item_info;
 
+		$item['cat'] = $this->Cat_model->getCatInfos($item_info->type);
+
 		// 设置header 信息
 		$header['title'] = $item_info->title."资料下载分享";
 		$header['keywords'] = $item_info->keywords;
