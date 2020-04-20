@@ -34,7 +34,7 @@ class Ku extends CI_Controller {
 		$config['uri_segment'] = 2;
 		$page = ($page ==1) ? $page : substr($page,0,-5);
 		if(!$page) $page = 1;
-		$limit=16;
+		$limit=20;
 
 
 		$config['base_url'] = site_url('/ku/');

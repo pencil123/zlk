@@ -35,7 +35,7 @@ class Cat extends CI_Controller {
 		}
 
 		$page = ($page ==1 ) ? $page : substr($page,0,-5);
-		$limit=16;
+		$limit=20;
 		$config['base_url'] = site_url('/cat/'.$urlPath);
 		//$config['first_url'] = site_url('/welcome');
 		$config['per_page'] = $limit;
