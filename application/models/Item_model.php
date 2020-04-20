@@ -39,7 +39,7 @@ class Item_model extends CI_Model{
 			$this->db->where('type ',$type);
 		}
 		$this->db->order_by('id');
-		$query = $this->db->get($this->item_table,16,$offset);
+		$query = $this->db->get($this->item_table,20,$offset);
 		return $query;
 	}
 
